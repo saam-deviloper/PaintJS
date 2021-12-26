@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+
+    <title>Paint</title>
+  </head>
+  <body class="body">
+    <h2 style="color: black">
+      <i class="fas fa-paint-brush" style="color: black"></i> Paint
+      <i class="fas fa-circle fa-1x" style="color: red"></i>
+      <i class="fas fa-circle" style="color: orangered"></i>
+      <i class="fas fa-circle" style="color: green"></i>
+    </h2>
+    <canvas width="900" height="300" class="canvas" id="canvas"
+      >canvas not supported in your browser</canvas
+    >
+    <div class="controller">
+      <!-- پاک کن - دایره - مستطیل - خط صاف - اسپری - پاک کردن کل صفحه -->
+      <div class="tools">
+        <button id="brush" class="brush-item" title="مداد">
+          <i class="fa fa-pencil-alt"></i>
+        </button>
+        <button id="circleMaker" class="brush-item" title="گردالی">
+          <i class="fa fa-circle-notch"></i>
+        </button>
+        <button id="lineralMaker" class="brush-item" title="خط صاف">
+          <i class="fa fa-line-height"></i>
+        </button>
+        <button id="recMaker" class="brush-item" title="مستطیل">
+          <i class="fa fa-rectangle-wide"></i>
+        </button>
+        <button id="eraser" class="brush-item" title="پاکن">
+          <i class="fa fa-eraser"></i>
+        </button>
+        <button id="txtMaker" class="brush-item" title="متن">
+          <i class="fa fa-text"></i>
+        </button>
+        <input
+          type="text"
+          id="txtMakerInput"
+          placeholder="ابتدا متن مورد نظر را بنویسید"
+          style="width: 250px"
+        />
+        <label for="txtMakerFontSize">FontSize: </label>
+        <input
+          type="text"
+          id="txtMakerFontSize"
+          value="30"
+          style="width: 28px; border-radius: 5px"
+        />
+        <label for="txtMakerFontSelect">FontFamily: </label>
+        <select name="" id="txtMakerFontSelect">
+          <option value="Tahoma">Tahoma</option>
+          <option value="Verdana">Verdana</option>
+          <option value="sans-serif">sans-serif</option>
+        </select>
+      </div>
+      <div style="display:inline-flex;margin-right: 5px;white-space: nowrap;">
+      <div class="color">
+        <label for="color-tab" id="labelColor" value="#000000">colors </label>
+        <input type="color" id="colorTab" />
+      </div>
+      <div>
+        <label for="pen-size" id="pen-size-label">Pen-size : 10px</label>
+        <input
+          type="range"
+          id="pen-size"
+          min="10"
+          max="40"
+          value="10"
+          step="5"
+          onchange="penSizeValue()"
+          ;
+        />
+      </div>
+    </div>
+      <div class="lastButtons">
+        <button id="reset-btn">شروع مجدد
+          <i class="fa fresh"></i>
+        </button>
+        <button id='btn-uploadImage-url'>
+          بارگذاری عکس پس زمینه از فایل سیستم
+        </button>
+        <button id="btn-uploadImage-uri">بارگذاری عکس پس زمینه از اینترنت</button>
+        <a href="" id="dllink">
+          <button>
+            download
+            <i class="fa fa-download"></i>
+          </button>
+        </a>
+      </div>
+    </div>
+  </body>
+  <script src="scripts.js"></script>
+</html>
