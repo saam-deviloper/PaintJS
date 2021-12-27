@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+  /* -moz-box-sizing: border-box; */
+  /* -webkit-box-sizing: border-box; */
+  /* user-select: none; */
+  /* -moz-user-select: none; */
+  /* -webkit-user-select: none; */
+}
+
+.body {
+  background-image: url(/img/pattern.jpg);
+  background-color: rgba(149, 187, 223, 0.863);
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+ 
+  font-family :Verdana, Geneva, Tahoma, sans-serif;
+}
+#pen-size-label {
+  margin-top: 100px;
+}
+.canvas {
+  width: 1060px;
+  height: 500px;
+  border: 1px solid rgba(190, 190, 190, 0.788);
+  border-bottom: 0;
+  background-color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.controller {
+  background-color: rgba(159, 153, 241, 0.959);
+  margin-top: 0px;
+  width: 1060px;
+  display: inline-block;
+  justify-content:flex-start ;
+  
+  padding: 10px 0px 10px 0px;
+  border-width: 1px;
+  border-color: black;
+  border-bottom-left-radius: 55px;
+  border-bottom-right-radius: 55px;
+  overflow: hidden;
+  flex-wrap: wrap;
+}
+.brush-item {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  outline: none;
+  border: 3px solid rgba(190, 190, 190, 0.788);
+  /* background-color: (190, 190, 190, 0.788); */
+}
+.label {
+  position: relative;
+  top: -5px;
+  white-space: nowrap;
+}
+.tools{
+  display: block;
+  justify-content: center;
+  white-space: nowrap;
+}
+.lastButtons{
+  margin-top: 5px;
+}
+
